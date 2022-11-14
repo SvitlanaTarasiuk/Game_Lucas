@@ -1,0 +1,1113 @@
+fileFormatVersion: 2
+guid: b7b377d7c8acc4c5f8db80adada3e422
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1024
+        width: 134
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e054b5b7177413f950d26081adf8b8
+      internalID: 236618388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1025
+        width: 163
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14de51adc6a79406ea37f9dc9f761c30
+      internalID: -461862818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_2
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1026
+        width: 183
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad61e213cc474b6896ee7201487d4db
+      internalID: -1431967652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1024
+        width: 121
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b021250c41424b822f6a17a192e7e
+      internalID: -423975466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_4
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1029
+        width: 190
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d850438fa3e5f41e4aeda8b0c62b88a7
+      internalID: 893337819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_5
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1024
+        width: 139
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636070e0e5d5e4117b4ef91bdfe25ab2
+      internalID: 1866832534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_6
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1024
+        width: 139
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce6ea567d3cb4ec184d8c863b9f60f4
+      internalID: 769249162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_7
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1024
+        width: 157
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff75fea0a4c3e4fde96e1ada9c2c7149
+      internalID: -1875995658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_8
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 1030
+        width: 157
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b192400205089464da288f86250a359b
+      internalID: 178526148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 768
+        width: 134
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5775002edd7da407ab80917658a8753a
+      internalID: -1096480565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_10
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 768
+        width: 179
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268c66a8036c5439483a654ee801718a
+      internalID: -2048844672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 768
+        width: 173
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96087b8667ee40e4984ee4a4b9717a7
+      internalID: -790272235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 768
+        width: 171
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051e9e5fc32024d14a14fcfa955537e8
+      internalID: -33169183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_13
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 768
+        width: 174
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e802af17be254800b24230eb13c20cc
+      internalID: 1280464205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_14
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 768
+        width: 180
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab900c6d08984ea9a2620c587fd2c3a
+      internalID: -376597595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_15
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 768
+        width: 109
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda72c9b1456f41028c12656322db0e0
+      internalID: 719411372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_16
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 769
+        width: 137
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b3bc24f4d614e8c8147786276d31de
+      internalID: -1509114952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_17
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 772
+        width: 141
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80623615ce0be4f2e8acda93f79f77b9
+      internalID: 1505703053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_18
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 512
+        width: 158
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b1f7f7cb4ae4bb2afad793f5754360
+      internalID: -1824185084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_19
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 519
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdd52a1451094c149bde0be68408adc
+      internalID: -2087483834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 516
+        width: 148
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232566bd5195e49de95663a3daca192a
+      internalID: -1821047420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_21
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 512
+        width: 113
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b919842d9c598409d80c5d3a890d149d
+      internalID: -488706577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_22
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 512
+        width: 142
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ade176f5749740d387d74c324208b65
+      internalID: 687206341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_23
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 512
+        width: 107
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ec1d0ecc5994cc69a324e628a5db9f
+      internalID: -194092211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_24
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 512
+        width: 143
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc17bb9b76d0448d938023f43869d08
+      internalID: -1481125150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_25
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 513
+        width: 167
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b5dfd0f7edd4470855bc327ca02ffe
+      internalID: 688419519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_26
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 523
+        width: 190
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74aef4d233c84d35a62608cd78ddf39
+      internalID: 837280912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_27
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 256
+        width: 170
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95183c20299b649e68a1ec5b0717a6ee
+      internalID: -1414926535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_28
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 256
+        width: 162
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc70b38e94274b7db053c15a112af23
+      internalID: -372415341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_29
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 256
+        width: 185
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5550de5a7ab04e1c8b1acc1cf33ee30
+      internalID: 179940627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_30
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 256
+        width: 121
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63af2fae149d4435bbf62dbd59e29015
+      internalID: -749010755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_31
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 256
+        width: 178
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e55adbbb07754ee09bef2401903dda4
+      internalID: 1333024984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_32
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 256
+        width: 118
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82949fb5db1a4a0faf7cf2db94a9401
+      internalID: 1024142310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_33
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 266
+        width: 186
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b65618640064f50ac6613750b6a54f
+      internalID: -2092459817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_34
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 256
+        width: 186
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7b78412132c4f12bb440cff3d49706
+      internalID: -315371721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_35
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 272
+        width: 157
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6255219ece498471d8f72ca646be3865
+      internalID: -1243884465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2
+        width: 148
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e5e6f52b268499788b1e2c6e105921
+      internalID: 1475326381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 129
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd850d31f7a54dea93f44597bf96490
+      internalID: -1690203977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_38
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 118
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6e2073b4a324753b728ccad37ca985
+      internalID: -2113339971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_39
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 129
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce520f5611ff47509d9a4dde01d2def
+      internalID: 660503788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_40
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 0
+        width: 149
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db636acc248fc4eb9bfc702f4219754e
+      internalID: 435116362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_41
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 0
+        width: 130
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a46442c202a4bf79aa1280211b3f6a
+      internalID: 2124880584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_42
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 0
+        width: 118
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e69d0180c274e15a4d723d4a6ee32c
+      internalID: 2061989203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_43
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 0
+        width: 129
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb39a872fdb7a4e59a1be2133994172b
+      internalID: 270224230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_malePerson_sheetHD_44
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 41
+        width: 189
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e9056c51d054b6c8886c2a3d863ff9
+      internalID: -284008277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      character_malePerson_sheetHD_42: 2061989203
+      character_malePerson_sheetHD_44: -284008277
+      character_malePerson_sheetHD_25: 688419519
+      character_malePerson_sheetHD_30: -749010755
+      character_malePerson_sheetHD_35: -1243884465
+      character_malePerson_sheetHD_41: 2124880584
+      character_malePerson_sheetHD_8: 178526148
+      character_malePerson_sheetHD_38: -2113339971
+      character_malePerson_sheetHD_32: 1024142310
+      character_malePerson_sheetHD_40: 435116362
+      character_malePerson_sheetHD_7: -1875995658
+      character_malePerson_sheetHD_1: -461862818
+      character_malePerson_sheetHD_37: -1690203977
+      character_malePerson_sheetHD_15: 719411372
+      character_malePerson_sheetHD_14: -376597595
+      character_malePerson_sheetHD_21: -488706577
+      character_malePerson_sheetHD_29: 179940627
+      character_malePerson_sheetHD_33: -2092459817
+      character_malePerson_sheetHD_12: -33169183
+      character_malePerson_sheetHD_36: 1475326381
+      character_malePerson_sheetHD_24: -1481125150
+      character_malePerson_sheetHD_31: 1333024984
+      character_malePerson_sheetHD_3: -423975466
+      character_malePerson_sheetHD_4: 893337819
+      character_malePerson_sheetHD_26: 837280912
+      character_malePerson_sheetHD_28: -372415341
+      character_malePerson_sheetHD_43: 270224230
+      character_malePerson_sheetHD_16: -1509114952
+      character_malePerson_sheetHD_18: -1824185084
+      character_malePerson_sheetHD_22: 687206341
+      character_malePerson_sheetHD_27: -1414926535
+      character_malePerson_sheetHD_17: 1505703053
+      character_malePerson_sheetHD_23: -194092211
+      character_malePerson_sheetHD_13: 1280464205
+      character_malePerson_sheetHD_20: -1821047420
+      character_malePerson_sheetHD_19: -2087483834
+      character_malePerson_sheetHD_5: 1866832534
+      character_malePerson_sheetHD_2: -1431967652
+      character_malePerson_sheetHD_9: -1096480565
+      character_malePerson_sheetHD_34: -315371721
+      character_malePerson_sheetHD_39: 660503788
+      character_malePerson_sheetHD_10: -2048844672
+      character_malePerson_sheetHD_0: 236618388
+      character_malePerson_sheetHD_11: -790272235
+      character_malePerson_sheetHD_6: 769249162
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
