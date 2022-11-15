@@ -8,10 +8,9 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject[] objHearts;
     [SerializeField] private GameObject panelGameOver;
     [SerializeField] private GameObject panelTheEnd;
-    //[SerializeField] private GameObject panelSetting;
+    [SerializeField] private GameObject panelSetting;
 
     private int heart = 5;
-    //private bool Button buttonPause= true;
 
     public void AddHeart()
     {
@@ -38,14 +37,16 @@ public class GameUI : MonoBehaviour
             }
         }
     }
-    /*public void Pause()
+    public void PauseOn()
     {
-        if(buttonPause)
         Time.timeScale = 0.00001f;
         panelSetting.SetActive(true);
-        if else(!buttonPause)
+    }
+    public void PauseOff()
+    {
         Time.timeScale = 1;
-    }*/
+        panelSetting.SetActive(false);
+    }
     public void GameOver()
     {
         panelGameOver.SetActive(true);

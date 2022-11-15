@@ -15,7 +15,6 @@ public class TheEnd : MonoBehaviour
             Hero heroPlayer = collision.GetComponent<Hero>();
             if (heroPlayer.Key == keyForTheEnd)
             {
-                //sprint("Portal");
                 Time.timeScale = 0;
                 gameUI.TheEnd();
                 
