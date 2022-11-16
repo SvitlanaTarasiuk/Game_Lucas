@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6165069032640384563}
   - component: {fileID: 6165069032640384562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_malePerson_walk7 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6165069032697065844}
   - component: {fileID: 6165069032697065847}
   - component: {fileID: 2591277054346366097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -156,12 +156,13 @@ MonoBehaviour:
   speed: 3
   jumpForce: 15
   textCoint: {fileID: 0}
-  textBubble: {fileID: 0}
+  textDiamond: {fileID: 0}
   gameUI: {fileID: 0}
+  silver: {fileID: 0}
   coins: 0
   life: 5
   key: 0
-  bubble: 0
+  diamond: 0
 --- !u!70 &6165069032697065847
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
