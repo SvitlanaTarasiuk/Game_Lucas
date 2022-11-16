@@ -15,12 +15,9 @@ public class Hero: MonoBehaviour
     public int key = 0;
     public int diamond = 0;
    
-    //public Color[]color;
-    //private int indexColor = 0;
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-    //private MeshRenderer mr;
 
     public int Key
     {
@@ -30,7 +27,6 @@ public class Hero: MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        //mr = GetComponent<MeshRenderer>();
     }
     private void FixedUpdate()
     {
@@ -38,10 +34,13 @@ public class Hero: MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButton("Horizontal"))
-         Run(); 
-        if (isGrounded && Input.GetButtonDown("Jump"))
-         Jump(); 
+        if (Time.timeScale >= 1)
+        {
+            if (Input.GetButton("Horizontal"))
+                Run();
+            if (isGrounded && Input.GetButtonDown("Jump"))
+                Jump();
+        }
     }
     private void Run()
     {
@@ -56,7 +55,6 @@ public class Hero: MonoBehaviour
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position+Vector3.down,0.3f);
-
         isGrounded = collider.Length > 1;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -67,7 +65,6 @@ public class Hero: MonoBehaviour
             textCoint.text = coins.ToString();
             Destroy(collision.gameObject);
         }
-
 
         if (collision.tag == "Diamond")
         {
@@ -99,14 +96,11 @@ public class Hero: MonoBehaviour
         }
         if (collision.tag == "SpicesEnemy")
         {
-            life -= 1;           
-            //mr.material.color = color[indexColor];
-            //indexColor = ++indexColor % color.Length;
+            life -= 1;
             gameUI.RemuveHeart();
             Damage();
-            //sprite.material.color = new Color(0.66f, 0.2f, 0.2f);
-           
-        }
+        }  
+
         if (collision.tag == "Key")
         {
             key +=1;

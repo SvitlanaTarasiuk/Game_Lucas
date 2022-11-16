@@ -8062,7 +8062,7 @@ GameObject:
   - component: {fileID: 1202258644}
   - component: {fileID: 1202258643}
   m_Layer: 5
-  m_Name: PanelBubble
+  m_Name: PanelDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13716,6 +13716,10 @@ PrefabInstance:
       objectReference: {fileID: 1692311849}
     - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
       propertyPath: textBubble
+      value: 
+      objectReference: {fileID: 1737850566}
+    - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+      propertyPath: textDiamond
       value: 
       objectReference: {fileID: 1737850566}
     - target: {fileID: 6165069032697065845, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
