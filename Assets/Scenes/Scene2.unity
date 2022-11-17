@@ -7497,6 +7497,9 @@ MonoBehaviour:
   - {fileID: 418501238}
   panelGameOver: {fileID: 17379726}
   panelTheEnd: {fileID: 0}
+  panelSetting: {fileID: 0}
+  panelSilver: {fileID: 0}
+  idLevel: 0
 --- !u!4 &1091875070
 Transform:
   m_ObjectHideFlags: 0
@@ -9426,7 +9429,7 @@ GameObject:
   - component: {fileID: 1457016105}
   m_Layer: 0
   m_Name: Preview-removebg-preview_64
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

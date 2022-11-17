@@ -17,6 +17,7 @@ TagManager:
   - Diamond
   - Bubble
   - Silver
+  - Platform
   layers:
   - Default
   - TransparentFX

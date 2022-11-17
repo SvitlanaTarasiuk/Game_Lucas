@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject panelGameOver;
     [SerializeField] private GameObject panelTheEnd;
     [SerializeField] private GameObject panelSetting;
+    [SerializeField] private GameObject panelSilver;
     [SerializeField] private int idLevel;
     private int heart = 5;
 
@@ -57,7 +58,14 @@ public class GameUI : MonoBehaviour
     }
     public void NewGame()
     {
+        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(idLevel);
+        Time.timeScale = 1;
+    }
+    public void Restart()
+    {
         SceneManager.LoadScene(idLevel);
         Time.timeScale = 1;
     }
+    
 }
