@@ -26,7 +26,15 @@ public class Zombie : MonoBehaviour
            {
             Destroy(gameObject);
            }
+            else
+            {
+                Invoke("ResetMaterial",2f);
+            }
         }
    
+    }
+    void ResetMaterial()
+    {
+        sprRend.material = matDefault;
     }
 }

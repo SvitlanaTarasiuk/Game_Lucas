@@ -12,13 +12,26 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject panelSilver;
     [SerializeField] private int idLevel;
     private int heart = 5;
+    
+
+    /*void Start()
+    {
+        heart = GlobalControl.Instantiate.heart;
+        panelGameOver = GlobalControl.Instantiate.panelGameOver;
+        diamond = GlobalControl.Instantiate.diamond;
+    }
+    public void SavePlayer()
+    {
+        GlobalControl.Instantiate.coins = heart;
+        GlobalControl.Instantiate.life = life;
+        GlobalControl.Instantiate.diamond = diamond;
+    }*/
 
     public void AddHeart()
     {
         heart++;
         UpdateHeart();
     }
-
     public void RemuveHeart()
     {
         heart--;

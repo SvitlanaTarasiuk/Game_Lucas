@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GlobalControl: MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GlobalControl: MonoBehaviour
     public int life;
     public int diamond;
     public static new GlobalControl Instantiate;
+
     void Awake()
     {
        if (Instantiate==null)

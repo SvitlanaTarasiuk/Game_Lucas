@@ -14,31 +14,31 @@ public class MusicVolume : MonoBehaviour
 
     void Start()
     {
-       audioSrc = GetComponent<AudioSource>();
-       isOn = true;
-     }
+        audioSrc = GetComponent<AudioSource>();
+        isOn = true;
+    }
     void Update()
     {
-        audioSrc.volume = musicVolume;  
-        if(PlayerPrefs.GetInt("music")==0)
+        audioSrc.volume = musicVolume;
+        if (PlayerPrefs.GetInt("music") == 0)
         {
             MusicButton.GetComponent<Image>().sprite = OnMusic;
             audioSrc.enabled = true;
             isOn = true;
         }
         else if (PlayerPrefs.GetInt("music") == 1)
-            {
+        {
             MusicButton.GetComponent<Image>().sprite = OffMusic;
             audioSrc.enabled = false;
-                isOn = false;
-            }
+            isOn = false;
+        }
     }
     public void SetVolume(float vol)
     {
         musicVolume = vol;
 
     }
-    public  void OffMusicVolume()
+    public void OffMusicVolume()
     {
         if (isOn)
         {
