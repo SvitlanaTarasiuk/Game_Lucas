@@ -138,10 +138,10 @@ public class Hero: MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        /*if (collision.transform.tag == "Platform")
+        if (collision.transform.tag == "Platform")
         {
             this.transform.parent = collision.transform;
-        }*/
+        }
         /*if (collision.transform.tag == "Silver")
         {
             silvercount++;
@@ -149,25 +149,25 @@ public class Hero: MonoBehaviour
             Destroy(collision.gameObject);
         }*/
     }
-        /*private void OnCollisionExit2D(Collision2D collision)
+        private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.tag == "Platform")
         {
             this.transform.parent = null;
         }
 
-    }*/
+    }
     
     private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Rigidbody2D tempSilver = Instantiate(silver, transform.position, Quaternion.identity);
-            tempSilver.AddForce(new Vector2(400, 0));
+            tempSilver.AddForce(new Vector2(isRigth ? 400: -400, 0));
             if (!isRigth)
             {
             SpriteRenderer srSilver =tempSilver.GetComponent<SpriteRenderer>();
-                srSilver.flipX = false;
+                srSilver.flipX = true;
                 srSilver.flipY = true;
             }
         }

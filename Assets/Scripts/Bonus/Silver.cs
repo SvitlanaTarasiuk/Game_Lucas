@@ -5,7 +5,7 @@ using UnityEngine;
 public class Silver : MonoBehaviour
 {
   
-    private void OnBecameInrisable()
+    private void OnBecameInvisible()
     {
         Destroy(gameObject);  
     }
