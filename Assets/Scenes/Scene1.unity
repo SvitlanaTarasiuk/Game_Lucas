@@ -11830,6 +11830,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 502626794}
     - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+      propertyPath: colorDamage.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+      propertyPath: colorDamage.b
+      value: 0.5562478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+      propertyPath: colorDamage.g
+      value: 0.5562478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+      propertyPath: colorDamage.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165069032697065844, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
       propertyPath: color.Array.size
       value: 2
       objectReference: {fileID: 0}

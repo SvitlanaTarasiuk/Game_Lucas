@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
+    [SerializeField] private Color colorDamage;
     private int liveZombie = 5;
     private SpriteRenderer sprRend;
-    private Material matBlinc;
-    private Material matDefault;
+    
     void Start()
     {
         sprRend = GetComponent<SpriteRenderer>();
-        matBlinc = Resources.Load("EnemyBlinc", typeof(Material)) as Material;
-        matDefault = sprRend.material;
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,21 +19,23 @@ public class Zombie : MonoBehaviour
         if (collision.transform.tag=="Silver")
         {
             liveZombie --;
-            sprRend.material = matBlinc; 
+            sprRend.color = colorDamage;
 
            if(liveZombie<=0)
            {
             Destroy(gameObject);
            }
             else
-            {
-                Invoke("ResetMaterial",2f);
-            }
+           {
+               Invoke("ResetMaterial",0.5f);
+
+           }
         }
    
     }
     void ResetMaterial()
     {
-        sprRend.material = matDefault;
+        //sprRend.material = matDefault;
+        sprRend.color = Color.white;
     }
 }

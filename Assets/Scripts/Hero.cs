@@ -12,6 +12,7 @@ public class Hero : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textSilver;
     [SerializeField] private GameUI gameUI;
     [SerializeField] private Rigidbody2D silver;
+    [SerializeField] private Color colorDamage;
     private bool isRigth = true;
 
     public int coins = 0;
@@ -123,6 +124,8 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
             gameUI.RemuveHeart();
             Damage();
+            sprite.color = colorDamage;
+            Invoke("ResetMaterial", 0.5f);
         }
         if (collision.tag == "SpicesEnemy")
         {
@@ -130,6 +133,8 @@ public class Hero : MonoBehaviour
             //SavePlayer();
             gameUI.RemuveHeart();
             Damage();
+            sprite.color = colorDamage;         
+            Invoke("ResetMaterial", 0.5f);
         }
         if (collision.tag == "Key")
         {
@@ -137,7 +142,14 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+   /* private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "SpicesEnemy")
+        {
+            ResetMaterial();
+        }
+    }*/
+        private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Enemy")
         {
@@ -184,6 +196,10 @@ public class Hero : MonoBehaviour
         GlobalControl.Instantiate.life = life;
         GlobalControl.Instantiate.diamond = diamond;
     }*/
+    void ResetMaterial()
+    {
+        sprite.color = Color.white;
+    }
     private void Damage()
     {
         if (life == 0)

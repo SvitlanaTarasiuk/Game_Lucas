@@ -4074,6 +4074,7 @@ MonoBehaviour:
   panelGameOver: {fileID: 17379726}
   panelTheEnd: {fileID: 1697139673}
   panelSetting: {fileID: 0}
+  panelSilver: {fileID: 0}
   idLevel: 3
 --- !u!4 &1091875070
 Transform:
@@ -4300,6 +4301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8dac03b0eada94381a91b2a2401b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorDamage: {r: 0.8679245, g: 0.43805626, b: 0.43805626, a: 1}
 --- !u!70 &1133278881
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4328,7 +4330,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -4336,7 +4338,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1152555849
 GameObject:
   m_ObjectHideFlags: 0
