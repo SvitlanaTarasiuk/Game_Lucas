@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6165069032640384563}
   - component: {fileID: 6165069032640384562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: character_malePerson_walk7 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 9c46f59b9c13448a5976d8ec2d8ba5aa, type: 3}
   m_Color: {r: 0.7264151, g: 0.69489145, b: 0.69489145, a: 1}
   m_FlipX: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6165069032697065844}
   - component: {fileID: 6165069032697065847}
   - component: {fileID: 2591277054346366097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -156,12 +156,13 @@ MonoBehaviour:
   speed: 3
   jumpForce: 15
   textCoint: {fileID: 0}
-  textBubble: {fileID: 0}
+  textDiamond: {fileID: 0}
   gameUI: {fileID: 0}
+  silver: {fileID: 0}
   coins: 0
   life: 5
   key: 0
-  bubble: 0
+  diamond: 0
 --- !u!70 &6165069032697065847
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6165069032697065854}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

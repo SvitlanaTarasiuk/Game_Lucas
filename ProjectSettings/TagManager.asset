@@ -16,6 +16,8 @@ TagManager:
   - SpicesEnemy
   - Diamond
   - Bubble
+  - Silver
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - UI
   - GroundObject
   - Hero
-  - 
+  - Silver
   - 
   - 
   - 

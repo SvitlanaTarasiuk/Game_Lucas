@@ -9,24 +9,37 @@ public class Hero: MonoBehaviour
     [SerializeField]private float jumpForce = 15f;
     [SerializeField] private TextMeshProUGUI textCoint;
     [SerializeField] private TextMeshProUGUI textDiamond;
+    [SerializeField] private TextMeshProUGUI textSilver;
     [SerializeField] private GameUI gameUI;
+    [SerializeField] private Rigidbody2D silver;
+    private bool isRigth = true;
+
     public int coins = 0;
     public int life = 5;
     public int key = 0;
     public int diamond = 0;
+    public int silvercount =0;
    
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-
+    //private Animator anim;
     public int Key
     {
         get => key;
     }
+
+    /*void Start()
+    {
+        coins = GlobalControl.Instantiate.coins;
+        life = GlobalControl.Instantiate.life;
+        diamond = GlobalControl.Instantiate.diamond;
+    }*/
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+       //anim = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
@@ -37,16 +50,18 @@ public class Hero: MonoBehaviour
         if (Time.timeScale >= 1)
         {
             if (Input.GetButton("Horizontal"))
-                Run();
+            { Run(); }
             if (isGrounded && Input.GetButtonDown("Jump"))
-                Jump();
+            { Jump(); }
+            Attack();
         }
     }
     private void Run()
     {
-        Vector3 dir = transform.right * Input.GetAxis("Horizontal");
+        float move = Input.GetAxis("Horizontal");   
+        Vector3 dir = transform.right * move;
         transform.position = Vector3.MoveTowards(transform.position, transform.position+dir,speed*Time.deltaTime);
-        sprite.flipX = dir.x < 0.0f;
+        Flip(move); 
     }
     private void Jump()
     {
@@ -57,6 +72,19 @@ public class Hero: MonoBehaviour
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position+Vector3.down,0.3f);
         isGrounded = collider.Length > 1;
     }
+    private void Flip(float move)
+    {
+        if (move < 0 && isRigth)
+        {
+            isRigth = false;
+            sprite.flipX = true;
+        }
+        if (move > 0 && !isRigth)
+        {
+            isRigth = true;
+            sprite.flipX = false;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag=="Coins")
@@ -65,20 +93,17 @@ public class Hero: MonoBehaviour
             textCoint.text = coins.ToString();
             Destroy(collision.gameObject);
         }
-
-        if (collision.tag == "Diamond")
+        if (collision.tag == "Silver")
         {
-            coins += 1000;
+            silvercount += 1;
             textCoint.text = coins.ToString();
             Destroy(collision.gameObject);
         }
-
         if (collision.tag == "Heart")
         {
             life +=1;
             Destroy(collision.gameObject);
-            gameUI.AddHeart();
-          
+            gameUI.AddHeart();         
         }
         if (collision.tag =="Diamond")
         {
@@ -100,7 +125,6 @@ public class Hero: MonoBehaviour
             gameUI.RemuveHeart();
             Damage();
         }  
-
         if (collision.tag == "Key")
         {
             key +=1;
@@ -108,6 +132,52 @@ public class Hero: MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+        /*if (collision.transform.tag == "Platform")
+        {
+            this.transform.parent = collision.transform;
+        }*/
+        /*if (collision.transform.tag == "Silver")
+        {
+            silvercount++;
+            textCoint.text = coins.ToString();
+            Destroy(collision.gameObject);
+        }*/
+    }
+        /*private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Platform")
+        {
+            this.transform.parent = null;
+        }
+
+    }*/
+    
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Rigidbody2D tempSilver = Instantiate(silver, transform.position, Quaternion.identity);
+            tempSilver.AddForce(new Vector2(400, 0));
+            if (!isRigth)
+            {
+            SpriteRenderer srSilver =tempSilver.GetComponent<SpriteRenderer>();
+                srSilver.flipX = false;
+                srSilver.flipY = true;
+            }
+        }
+    }
+    /*public void SavePlayer()
+    {
+        GlobalControl.Instantiate.coins = coins;
+        GlobalControl.Instantiate.life = life;
+        GlobalControl.Instantiate.diamond = diamond;
+    }*/
     private void Damage()
     {   
         if (life==0)
