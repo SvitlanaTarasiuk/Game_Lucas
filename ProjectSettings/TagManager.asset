@@ -18,6 +18,7 @@ TagManager:
   - Bubble
   - Silver
   - Platform
+  - Zombie
   layers:
   - Default
   - TransparentFX

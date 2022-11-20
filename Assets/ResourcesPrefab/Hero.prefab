@@ -153,16 +153,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7803f03a0081c4c76a26c2ce9d117045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   jumpForce: 15
   textCoint: {fileID: 0}
   textDiamond: {fileID: 0}
+  textSilver: {fileID: 0}
   gameUI: {fileID: 0}
   silver: {fileID: 0}
+  colorDamage: {r: 0.9433962, g: 0.5562478, b: 0.5562478, a: 1}
   coins: 0
   life: 5
   key: 0
   diamond: 0
+  silvercount: 0
 --- !u!70 &6165069032697065847
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

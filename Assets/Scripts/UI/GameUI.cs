@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class GameUI : MonoBehaviour
 {
@@ -9,22 +11,27 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject panelGameOver;
     [SerializeField] private GameObject panelTheEnd;
     [SerializeField] private GameObject panelSetting;
-    [SerializeField] private GameObject panelSilver;
+
+    [SerializeField] private TextMeshProUGUI textCoin;
+    [SerializeField] private TextMeshProUGUI textDiamond;
+    [SerializeField] private TextMeshProUGUI textSilver;
     [SerializeField] private int idLevel;
     private int heart = 5;
-    
+
 
     /*void Start()
     {
         heart = GlobalControl.Instantiate.heart;
-        panelGameOver = GlobalControl.Instantiate.panelGameOver;
-        diamond = GlobalControl.Instantiate.diamond;
+        textCoin.text= GlobalControl.Instantiate.textCoin.text;
+        textDiamond.text = GlobalControl.Instantiate.textDiamond.text;
+        textSilver.text = GlobalControl.Instantiate.textSilver.text;
     }
     public void SavePlayer()
     {
         GlobalControl.Instantiate.coins = heart;
-        GlobalControl.Instantiate.life = life;
-        GlobalControl.Instantiate.diamond = diamond;
+        GlobalControl.Instantiate.textCoint.text=textCoint.text;
+        GlobalControl.Instantiate.textDiamond.text = textDiamond.text;
+        GlobalControl.Instantiate.textSilver.text = textSilver.text;
     }*/
 
     public void AddHeart()
@@ -51,6 +58,18 @@ public class GameUI : MonoBehaviour
             }
         }
     }
+    public void SetCountCoinUI(int countCoin)
+    {
+        textCoin.text = countCoin.ToString();
+    }
+    public void SetCountDiamondUI(int countDiamond)
+    {
+        textDiamond.text = countDiamond.ToString();
+    }
+    public void SetCountSilverUI(int countSilver)
+    {
+        textSilver.text = countSilver.ToString();
+    }
     public void PauseOn()
     {
         Time.timeScale = 0.00001f;
@@ -72,7 +91,6 @@ public class GameUI : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(1);
-        //SceneManager.LoadScene(idLevel);
         Time.timeScale = 1;
     }
     public void Restart()

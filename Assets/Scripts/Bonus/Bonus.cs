@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class BonusBubble: MonoBehaviour
+public class Bonus: MonoBehaviour
 {
+    public GameObject cube;
     public GameObject objectBonus;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {        
         if (collision.gameObject.tag == "Player")
         {
@@ -16,7 +17,7 @@ public class BonusBubble: MonoBehaviour
       void NewObject()
     {
         GameObject newobjectBonus = Instantiate(objectBonus);
-        newobjectBonus.transform.position = new Vector3(33.44f, 0.35f, 0);
+        newobjectBonus.transform.position = new Vector3(cube.transform.position.x, cube.transform.position.y+2.0f, 0);
     }
 }
 

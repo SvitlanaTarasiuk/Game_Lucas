@@ -1,27 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float jumpForce = 15f;
-    [SerializeField] private TextMeshProUGUI textCoint;
-    [SerializeField] private TextMeshProUGUI textDiamond;
-    [SerializeField] private TextMeshProUGUI textSilver;
+    [SerializeField] private float jumpForce = 15f;   
     [SerializeField] private GameUI gameUI;
-    [SerializeField] private Rigidbody2D silver;
+    [SerializeField] private Rigidbody2D silverWeapon;
     [SerializeField] private Color colorDamage;
     private bool isRigth = true;
-
-    public int coins = 0;
+    private bool isGrounded = false;
+    public int coins=0;
     public int life = 5;
     public int key = 0;
     public int diamond = 0;
-    public int silvercount = 0;
-
-    private bool isGrounded = false;
+    public int silver = 0; 
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     //private Animator anim;
@@ -30,12 +22,12 @@ public class Hero : MonoBehaviour
     {
         get => key;
     }
-
     /*void Start()
     {
         coins = GlobalControl.Instantiate.coins;
         life = GlobalControl.Instantiate.life;
-        diamond = GlobalControl.Instantiate.diamond;
+        diamond = GlobalControl.Instantiate.diamond;        
+        gameUI = GlobalControl.Instantiate.gameUI;
     }*/
     void Awake()
     {
@@ -58,14 +50,14 @@ public class Hero : MonoBehaviour
             Attack();
         }
     }
-    private void Run()
+    public void Run()
     {
         float move = Input.GetAxis("Horizontal");
         Vector3 dir = transform.right * move;
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
         Flip(move);
     }
-    private void Jump()
+    public void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
@@ -92,30 +84,29 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Coins")
         {
             coins += 100;
-            textCoint.text = coins.ToString();
-            Destroy(collision.gameObject);
             //SavePlayer();
+            gameUI.SetCountCoinUI(coins);           
+            Destroy(collision.gameObject);      
         }
-        /*if (collision.tag == "Silver")
+        if (collision.tag == "Silver")
         {
-            silvercount += 1;
-            textCoint.text = coins.ToString();
+            silver += 1;
+            gameUI.SetCountSilverUI(silver);
             Destroy(collision.gameObject);
-        }*/
+        }
         if (collision.tag == "Heart")
         {
             life += 1;
             //SavePlayer();
-            Destroy(collision.gameObject);
             gameUI.AddHeart();
+            Destroy(collision.gameObject);           
         }
         if (collision.tag == "Diamond")
         {
             diamond += 5;
-            Destroy(collision.gameObject);
             //SavePlayer();
-            textDiamond.text = diamond.ToString();
-            Damage();
+            gameUI.SetCountDiamondUI(diamond);  
+            Destroy(collision.gameObject);            
         }
         if (collision.tag == "Enemy")
         {
@@ -130,19 +121,20 @@ public class Hero : MonoBehaviour
         if (collision.tag == "SpicesEnemy")
         {
             life -= 1;
-            //SavePlayer();
+           // SavePlayer();
             gameUI.RemuveHeart();
             Damage();
             sprite.color = colorDamage;         
             Invoke("ResetMaterial", 0.5f);
         }
-        if (collision.tag == "Key")
+            if (collision.tag == "Key")
         {
             key += 1;
             Destroy(collision.gameObject);
         }
+
     }
-   /* private void OnTriggerExit2D(Collider2D collision)
+   /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "SpicesEnemy")
         {
@@ -156,31 +148,34 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.transform.tag == "Platform")
-        {
-            this.transform.parent = collision.transform;
+         {
+            transform.parent = collision.transform;
         }
-        /*if (collision.transform.tag == "Silver")
+        if (collision.transform.tag == "Zombie")
         {
-            silvercount++;
-            textCoint.text = coins.ToString();
-            Destroy(collision.gameObject);
-        }*/
+            life -= 1;
+            //SavePlayer();
+            gameUI.RemuveHeart();
+            Damage();
+            sprite.color = colorDamage;
+            Invoke("ResetMaterial", 0.5f);
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.tag == "Platform")
         {
-            this.transform.parent = null;
+            transform.parent = null;
         }
-
     }
-
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && silver>0)
         {
-            Rigidbody2D tempSilver = Instantiate(silver, transform.position, Quaternion.identity);
-            tempSilver.AddForce(new Vector2(isRigth ? 400 : -400, 0));
+            silver--;
+            gameUI.SetCountSilverUI(silver);
+            Rigidbody2D tempSilver = Instantiate(silverWeapon, transform.position, Quaternion.identity);
+            tempSilver.AddForce(new Vector2(isRigth ? 300 : -300, 0));
             if (!isRigth)
             {
                 SpriteRenderer srSilver = tempSilver.GetComponent<SpriteRenderer>();
@@ -194,7 +189,8 @@ public class Hero : MonoBehaviour
     {
         GlobalControl.Instantiate.coins = coins;
         GlobalControl.Instantiate.life = life;
-        GlobalControl.Instantiate.diamond = diamond;
+        GlobalControl.Instantiate.diamond = diamond;        
+        GlobalControl.Instantiate.gameUI = gameUI;
     }*/
     void ResetMaterial()
     {
