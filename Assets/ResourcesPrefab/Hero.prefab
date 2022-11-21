@@ -155,17 +155,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpForce: 15
-  textCoint: {fileID: 0}
-  textDiamond: {fileID: 0}
-  textSilver: {fileID: 0}
   gameUI: {fileID: 0}
-  silver: {fileID: 0}
+  silverWeapon: {fileID: 4416089701507728471, guid: 6abbbaa48e390d0408e5fca54274a3f7, type: 3}
   colorDamage: {r: 0.9433962, g: 0.5562478, b: 0.5562478, a: 1}
   coins: 0
   life: 5
   key: 0
   diamond: 0
-  silvercount: 0
+  silver: 0
 --- !u!70 &6165069032697065847
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -132,7 +132,6 @@ public class Hero : MonoBehaviour
             key += 1;
             Destroy(collision.gameObject);
         }
-
     }
    /*private void OnTriggerExit2D(Collider2D collision)
     {

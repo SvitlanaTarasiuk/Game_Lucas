@@ -28,12 +28,12 @@ public class Zombie : MonoBehaviour
         }
             if(moveingRigth)
         {
-            transform.position= new Vector2(transform.position.x+speed*Time.deltaTime,transform.position.y); 
+            transform.position= new Vector2(transform.position.x + speed * Time.deltaTime,transform.position.y); 
         }
             else
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-                }
+         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -58,7 +58,6 @@ public class Zombie : MonoBehaviour
     }
     void ResetMaterial()
     {
-        //sprRend.material = matDefault;
         sprRend.color = Color.white;
     }
 }
