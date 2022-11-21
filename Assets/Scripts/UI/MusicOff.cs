@@ -9,7 +9,9 @@ public class MusicOff : MonoBehaviour
     public Sprite OffMusic;
     public AudioSource audioSrc;
     public Image MusicButton;
+    public Slider slider;
     public bool isOn;
+    private float musicVolume = 1f;
 
     void Start()
     {
@@ -17,28 +19,44 @@ public class MusicOff : MonoBehaviour
     }
     void Update()
     {
-        if (PlayerPrefs.GetInt("music") <=1f)
+        if (PlayerPrefs.GetFloat("music")> 0)
         {
-            MusicButton.GetComponent<Image>().sprite = OnMusic;
+            MusicButton.sprite = OnMusic;
             audioSrc.enabled = true;
             isOn = true;
         }
-        else if (PlayerPrefs.GetInt("music") == 0)
+        else 
         {
-            MusicButton.GetComponent<Image>().sprite = OffMusic;
+            MusicButton.sprite = OffMusic;
             audioSrc.enabled = false;
             isOn = false;
         }
     }
-    /*public void OffMusicVolume()
+    public void OffMusicVolume()
     {
         if (!isOn)
         {
-            PlayerPrefs.SetInt("music", 0);
+            PlayerPrefs.SetFloat("music", 1);
+            slider.value = 1;
+            MusicButton.sprite = OnMusic;
+            audioSrc.enabled = true;
         }
         else if (isOn)
         {
-            PlayerPrefs.SetInt("music", 1);
+            PlayerPrefs.SetFloat("music", 0);
+            slider.value = 0;
+            MusicButton.sprite = OffMusic;
+            audioSrc.enabled = false;
         }
-    }*/
+        isOn = !isOn;
+    }
+
+    public void SetVolume(float vol)
+    {
+        musicVolume = vol;
+        PlayerPrefs.SetFloat("music", vol);
+        audioSrc.volume = musicVolume;
+
+
+    }
 }
