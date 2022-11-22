@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 1807241190001713335}
   m_Layer: 5
   m_Name: Image 5
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1297,7 +1297,7 @@ GameObject:
   - component: {fileID: 1807241190202591070}
   m_Layer: 5
   m_Name: Image1
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3560,7 +3560,7 @@ GameObject:
   - component: {fileID: 1807241190967825535}
   m_Layer: 5
   m_Name: Image 2
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3894,7 +3894,7 @@ GameObject:
   - component: {fileID: 1807241191115476870}
   m_Layer: 5
   m_Name: Image 3
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5823,7 +5823,7 @@ GameObject:
   - component: {fileID: 1807241191775750420}
   m_Layer: 5
   m_Name: Image 4
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6880,10 +6880,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2416081973409055426}
-    - target: {fileID: 8434459869808507504, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseOff
-      objectReference: {fileID: 0}
     - target: {fileID: 8434459869982369887, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
