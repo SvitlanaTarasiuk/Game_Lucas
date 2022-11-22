@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera4 : MonoBehaviour
 {
-    [SerializeField] private Transform player;          //об'єкт-ціль
+    [SerializeField] private Transform player;         //об'єкт-ціль
     [SerializeField] private float sensetyCam = 5;      //швидкість переміщення
     Transform cameraTransform;                          //камера
     private Vector3 deltaPosCam;                        //зміщення
@@ -12,13 +12,14 @@ public class Camera4 : MonoBehaviour
     //private float pointX2 = -4f;
     [SerializeField] private float pointX1 = 18f;
     [SerializeField] private float pointY = -0.6f;
-    private void Start()
-    {    
+
+    void Start()
+    {
         cameraTransform = transform;
         deltaPosCam = cameraTransform.position - player.position;
         deltaPosCam.z = -10;
     }
-    void Update()
+    void FixedUpdate()
     {
         //if (player.position.x > pointX2 && transform.position.x < pointX1)
         if (player.position.x < pointX1)

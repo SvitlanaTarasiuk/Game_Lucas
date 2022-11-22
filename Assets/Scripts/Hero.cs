@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
@@ -22,16 +23,33 @@ public class Hero : MonoBehaviour
     {
         get => key;
     }
-    /*void Start()
-    {
 
-    }*/
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         //anim = GetComponent<Animator>();
+        SceneManager.sceneLoaded += LevelLoaded;//підписка на подію завантаження сцени
     }
+    void Start()
+    {
+        SetValueInUI();
+    }
+    void SetValueInUI()
+    {
+        gameUI.SetCountCoinUI(coins);
+        gameUI.SetCountDiamondUI(diamond);
+        gameUI.SetCountSilverUI(silver);
+    }
+    private void LevelLoaded(Scene scene,LoadSceneMode mode)
+    {
+        if(SingletoneHero.singletoneHero.transform==transform)
+        {
+            gameUI = FindObjectOfType<GameUI>();
+            SetValueInUI();
+        }
+    }
+    
     private void FixedUpdate()
     {
         CheckGround();

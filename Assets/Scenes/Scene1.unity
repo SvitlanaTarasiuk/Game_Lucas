@@ -2036,7 +2036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bba04802c0c547a590314e8813b2552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 936662712}
   sensetyCam: 5
   pointX1: 18
   pointY: -0.6
@@ -3361,11 +3360,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &936662712 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6165069032697065845, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
-  m_PrefabInstance: {fileID: 6165069033449138125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &953237921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9281,11 +9275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2591277054346366097, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2591277054346366097, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -9405,8 +9399,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2591277054346366097, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
 --- !u!1001 &6672790525587896947
 PrefabInstance:

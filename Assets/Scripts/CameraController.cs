@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform target;
-    private float speed;
-    private Vector3 offset;
+   //[SerializeField] private Transform player;         //об'єкт-ціль
+    [SerializeField] private float sensetyCam = 5;      //швидкість переміщення
+    Transform player;
+    Transform cameraTransform;                          //камера
+    Vector3 deltaPosCam;                        //зміщення
+    private Vector3 target;                             //ціль
+    //private float pointX2 = -4f;
+    [SerializeField] private float pointX1 = 18f;
+    [SerializeField] private float pointY = -0.6f;
 
-    private void LateUpdate()
+    //void Start()
+    public void InitCam(Transform playerTransform)
     {
-        Vector3 targetPosition = target.position + offset;
-
-        Vector3 resultPosition = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime *speed);
-        transform.position =resultPosition;
-
+        player = playerTransform;
+        cameraTransform = transform;
+        deltaPosCam = cameraTransform.position - player.position;
+        deltaPosCam.z = -10;
+    }
+    void FixedUpdate()
+    {
+        //if (player.position.x > pointX2 && transform.position.x < pointX1)
+        if (player.position.x < pointX1)
+        {
+            target = player.transform.position + deltaPosCam;
+            target.y = pointY;
+            cameraTransform.position = Vector3.Lerp(cameraTransform.position, target, Time.deltaTime * sensetyCam);
+        }
     }
 }
