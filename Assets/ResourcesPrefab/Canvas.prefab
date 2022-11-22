@@ -6647,11 +6647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objHearts:
-  - {fileID: 1251169950753343049, guid: 87fc73f7b5dd14c918621062becfea59, type: 3}
-  - {fileID: 1251169950753343049, guid: 87fc73f7b5dd14c918621062becfea59, type: 3}
-  - {fileID: 1251169950753343049, guid: 87fc73f7b5dd14c918621062becfea59, type: 3}
-  - {fileID: 1251169950753343049, guid: 87fc73f7b5dd14c918621062becfea59, type: 3}
-  - {fileID: 1251169950753343049, guid: 87fc73f7b5dd14c918621062becfea59, type: 3}
+  - {fileID: 1807241190202591064}
+  - {fileID: 1807241190967825529}
+  - {fileID: 1807241191115476864}
+  - {fileID: 1807241191775750422}
+  - {fileID: 1807241190001713329}
   panelGameOver: {fileID: 1807241191110190500}
   panelTheEnd: {fileID: 7741054724353182464}
   panelSetting: {fileID: 8282854787041722404}
