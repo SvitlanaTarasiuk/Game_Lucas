@@ -7,7 +7,7 @@ public class Zombie : MonoBehaviour
     [SerializeField] private Color colorDamage;
     private int liveZombie = 10;
     private SpriteRenderer sprRend;
-    //private float dirX;
+    private float dirX;
     private float speed =3f; 
     private bool moveingRigth=true;
     private Object explosion;
