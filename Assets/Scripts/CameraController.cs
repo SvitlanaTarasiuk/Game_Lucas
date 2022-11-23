@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-   //[SerializeField] private Transform player;         //об'єкт-ціль
+    [SerializeField] private Transform player;          //об'єкт-ціль
     [SerializeField] private float sensetyCam = 5;      //швидкість переміщення
-    Transform player;
+    //Transform player;
     Transform cameraTransform;                          //камера
-    Vector3 deltaPosCam;                        //зміщення
+    Vector3 deltaPosCam;                                //зміщення
     private Vector3 target;                             //ціль
     //private float pointX2 = -4f;
     [SerializeField] private float pointX1 = 18f;
