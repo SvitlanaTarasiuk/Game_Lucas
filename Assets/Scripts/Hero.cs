@@ -57,6 +57,7 @@ public class Hero : MonoBehaviour
         silver = 0;
         life = 5;
         SetValueInUI();
+
     }
     private void FixedUpdate()
     {
