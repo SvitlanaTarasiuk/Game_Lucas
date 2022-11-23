@@ -37,17 +37,17 @@ public class GameUI : MonoBehaviour
     public void AddHeart()
     {
         heart++;
-        //UpdateHeart();
-        SetCountLifeUI(heart);
+        UpdateHeart();
+        //SetCountLifeUI(heart);
     }
     public void RemuveHeart()
     {
         heart--;
-        //UpdateHeart();
-        SetCountLifeUI(heart);
+        UpdateHeart();
+        //SetCountLifeUI(heart);
     }
-    public void SetCountLifeUI(int heart)
-    //void UpdateHeart()
+    
+    void UpdateHeart()
     {
         for (int i = 0; i < 5; i++)
         {
@@ -60,6 +60,11 @@ public class GameUI : MonoBehaviour
                 objHearts[i].SetActive(false);
             }
         }
+    }
+    public void SetCountLifeUI(int life)
+    {
+        heart = life;
+        UpdateHeart();
     }
     public void SetCountCoinUI(int countCoin)
     {
@@ -95,6 +100,8 @@ public class GameUI : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
+        SingletoneHero.singletoneHero.GetComponent<Hero>().NewStartParametr();
+        
     }
     public void Restart()
     {

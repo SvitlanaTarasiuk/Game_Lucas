@@ -12,7 +12,6 @@ public class Hero : MonoBehaviour
     private bool isGrounded = false;
     public int coins = 0;
     public int life = 5;
-    //public int heart = 5;
     public int key = 0;
     public int diamond = 0;
     public int silver = 0;
@@ -51,7 +50,14 @@ public class Hero : MonoBehaviour
             SetValueInUI();
         }
     }
-    
+    public void NewStartParametr()
+    {
+        coins = 0;
+        diamond = 0;
+        silver = 0;
+        life = 5;
+        SetValueInUI();
+    }
     private void FixedUpdate()
     {
         CheckGround();
@@ -203,6 +209,7 @@ public class Hero : MonoBehaviour
     {
         life -= 1;
         gameUI.RemuveHeart();
+
         if (life == 0)
         {
             Time.timeScale = 0;

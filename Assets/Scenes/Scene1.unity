@@ -2037,7 +2037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensetyCam: 5
-  player: {fileID: 1866295138}
   pointX1: 18
   pointY: -0.6
 --- !u!1001 &528225531
@@ -3374,7 +3373,7 @@ GameObject:
   - component: {fileID: 914879148}
   m_Layer: 0
   m_Name: RestartStartPoint
-  m_TagString: Untagged
+  m_TagString: RestartStartPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7274,11 +7273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7803f03a0081c4c76a26c2ce9d117045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1866295138 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6165069032697065845, guid: b22849c84ea68a9468e15e188f648a75, type: 3}
-  m_PrefabInstance: {fileID: 6165069033449138125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1866982407
 PrefabInstance:
   m_ObjectHideFlags: 0
