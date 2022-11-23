@@ -12,6 +12,7 @@ public class Hero : MonoBehaviour
     private bool isGrounded = false;
     public int coins = 0;
     public int life = 5;
+    //public int heart = 5;
     public int key = 0;
     public int diamond = 0;
     public int silver = 0;
@@ -40,6 +41,7 @@ public class Hero : MonoBehaviour
         gameUI.SetCountCoinUI(coins);
         gameUI.SetCountDiamondUI(diamond);
         gameUI.SetCountSilverUI(silver);
+        gameUI.SetCountLifeUI(life);
     }
     private void LevelLoaded(Scene scene,LoadSceneMode mode)
     {
@@ -126,21 +128,21 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Enemy")
-        {
-            life -= 1;
-            Destroy(collision.gameObject);
-            gameUI.RemuveHeart();
+        {           
             Damage();
+            Destroy(collision.gameObject);
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
         }
         if (collision.tag == "SpicesEnemy")
-        {
-            life -= 1;
-            gameUI.RemuveHeart();
+        {       
             Damage();
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
+        }
+        if (collision.tag == "RestartStartPoint")
+        {
+            Damage();            
         }
         if (collision.tag == "Key")
         {
@@ -160,9 +162,7 @@ public class Hero : MonoBehaviour
             transform.parent = collision.transform;
         }
         if (collision.transform.tag == "Zombie")
-        {
-            life -= 1;
-            gameUI.RemuveHeart();
+        {           
             Damage();
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
@@ -201,6 +201,8 @@ public class Hero : MonoBehaviour
 
     private void Damage()
     {
+        life -= 1;
+        gameUI.RemuveHeart();
         if (life == 0)
         {
             Time.timeScale = 0;

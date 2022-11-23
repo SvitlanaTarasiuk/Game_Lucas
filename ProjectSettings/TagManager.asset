@@ -19,6 +19,8 @@ TagManager:
   - Silver
   - Platform
   - Zombie
+  - StartPoint
+  - RestartStartPoint
   layers:
   - Default
   - TransparentFX

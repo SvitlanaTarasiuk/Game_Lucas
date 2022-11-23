@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-{
-    [SerializeField] private Transform player;          //об'єкт-ціль
+{          
     [SerializeField] private float sensetyCam = 5;      //швидкість переміщення
-    //Transform player;
+    //[SerializeField] private Transform player;          //об'єкт-ціль
+    Transform player;
     Transform cameraTransform;                          //камера
     Vector3 deltaPosCam;                                //зміщення
-    private Vector3 target;                             //ціль
+    Vector3 target;                             //ціль
     //private float pointX2 = -4f;
     [SerializeField] private float pointX1 = 18f;
     [SerializeField] private float pointY = -0.6f;

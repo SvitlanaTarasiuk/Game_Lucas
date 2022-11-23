@@ -37,14 +37,17 @@ public class GameUI : MonoBehaviour
     public void AddHeart()
     {
         heart++;
-        UpdateHeart();
+        //UpdateHeart();
+        SetCountLifeUI(heart);
     }
     public void RemuveHeart()
     {
         heart--;
-        UpdateHeart();
+        //UpdateHeart();
+        SetCountLifeUI(heart);
     }
-    void UpdateHeart()
+    public void SetCountLifeUI(int heart)
+    //void UpdateHeart()
     {
         for (int i = 0; i < 5; i++)
         {

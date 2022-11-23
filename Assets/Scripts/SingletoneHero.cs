@@ -30,10 +30,5 @@ public class SingletoneHero : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        void Update()
-        {
-
-        }
     }
 }
