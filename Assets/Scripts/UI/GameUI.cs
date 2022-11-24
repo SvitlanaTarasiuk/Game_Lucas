@@ -18,33 +18,15 @@ public class GameUI : MonoBehaviour
     [SerializeField] private int idLevel;
     private int heart = 5;
 
-
-    /*void Start()
-    {
-        heart = GlobalControl.Instantiate.heart;
-        textCoin.text= GlobalControl.Instantiate.textCoin.text;
-        textDiamond.text = GlobalControl.Instantiate.textDiamond.text;
-        textSilver.text = GlobalControl.Instantiate.textSilver.text;
-    }
-    public void SavePlayer()
-    {
-        GlobalControl.Instantiate.coins = heart;
-        GlobalControl.Instantiate.textCoint.text=textCoint.text;
-        GlobalControl.Instantiate.textDiamond.text = textDiamond.text;
-        GlobalControl.Instantiate.textSilver.text = textSilver.text;
-    }*/
-
     public void AddHeart()
     {
         heart++;
         UpdateHeart();
-        //SetCountLifeUI(heart);
     }
     public void RemuveHeart()
     {
         heart--;
         UpdateHeart();
-        //SetCountLifeUI(heart);
     }
     
     void UpdateHeart()

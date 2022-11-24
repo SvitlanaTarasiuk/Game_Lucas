@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     [SerializeField] private int idNextLevel;
-    private int keyForNextLevel=1;
+    private int keyForNextLevel = 1;
+    private int key = 0;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             Hero heroPlayer = collision.GetComponent<Hero>();
-            if (heroPlayer.Key == keyForNextLevel)
+            key = heroPlayer.Key;
+
+            if (key == keyForNextLevel)
             {
-                print("Portal");
+                key -= 1;                
                 SceneManager.LoadScene(idNextLevel);
             }
         }

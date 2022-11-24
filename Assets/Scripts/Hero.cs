@@ -56,6 +56,7 @@ public class Hero : MonoBehaviour
         diamond = 0;
         silver = 0;
         life = 5;
+        key = 0;
         SetValueInUI();
 
     }
@@ -75,6 +76,7 @@ public class Hero : MonoBehaviour
             Attack();
         }
     }
+
     public void Run()
     {
         float move = Input.GetAxis("Horizontal");
