@@ -44,12 +44,17 @@ public class Hero : MonoBehaviour
     }
     private void LevelLoaded(Scene scene,LoadSceneMode mode)
     {
+        Invoke("ConnectUI", 0.1f);
+    }
+    void ConnectUI()
+    {
         if(SingletoneHero.singletoneHero.transform==transform)
         {
             gameUI = FindObjectOfType<GameUI>();
             SetValueInUI();
         }
     }
+
     public void NewStartParametr()
     {
         coins = 0;
