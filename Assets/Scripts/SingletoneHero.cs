@@ -29,18 +29,18 @@ public class SingletoneHero : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
         }
-        /* else if (this != _singletoneHero)
+        else if (this != _singletoneHero)
          {
              print("SingeltonAwake_Destroy");
              Destroy(this.gameObject);
-         }*/
-        else
+         }
+        /*else
         {
             if (_singletoneHero != this)
             {
                 print("SingeltonAwake_Destroy");
                 Destroy(gameObject);
            }
-        }     
+        }   */  
     }
    }
