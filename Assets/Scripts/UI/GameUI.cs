@@ -27,8 +27,7 @@ public class GameUI : MonoBehaviour
     {
         heart--;
         UpdateHeart();
-    }
-    
+    }   
     void UpdateHeart()
     {
         for (int i = 0; i < 5; i++)
@@ -72,23 +71,29 @@ public class GameUI : MonoBehaviour
     }
     public void GameOver()
     {
-        panelGameOver.SetActive(true);
+       print("GameOverDestroy");
+       panelGameOver.SetActive(true);
     }
     public void TheEnd()
     {
+       print("TheEnd");
+
         panelTheEnd.SetActive(true);
     }
     public void NewGame()
     {
+        print("NewGame");
+
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
         SingletoneHero.singletoneHero.GetComponent<Hero>().NewStartParametr();
-        
+
     }
-    public void Restart()
+    /*public void Restart()
     {
+        print("Restart");
         SceneManager.LoadScene(idLevel);
-        Time.timeScale = 1;
-    }
-    
+        Time.timeScale = 1;      
+    }*/
+
 }

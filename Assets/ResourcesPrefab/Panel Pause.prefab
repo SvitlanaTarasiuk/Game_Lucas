@@ -1367,10 +1367,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameUI, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1475,10 +1471,6 @@ PrefabInstance:
     - target: {fileID: 138937900035660648, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 138937900035660648, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
       objectReference: {fileID: 0}
     - target: {fileID: 138937900035660650, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
       propertyPath: m_Name

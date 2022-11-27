@@ -11,7 +11,7 @@ public class MusicOff : MonoBehaviour
     public Image MusicButton;
     public Slider slider;
     public bool isOn;
-    private float musicVolume = 1f;
+    private float musicVolume=1;
 
     void Start()
     {
@@ -36,6 +36,7 @@ public class MusicOff : MonoBehaviour
     {
         if (!isOn)
         {
+            print("SetMusic_1");
             PlayerPrefs.SetFloat("music", 1);
             slider.value = 1;
             MusicButton.sprite = OnMusic;
@@ -43,6 +44,7 @@ public class MusicOff : MonoBehaviour
         }
         else if (isOn)
         {
+            print("SetMusic_0");
             PlayerPrefs.SetFloat("music", 0);
             slider.value = 0;
             MusicButton.sprite = OffMusic;
@@ -50,13 +52,25 @@ public class MusicOff : MonoBehaviour
         }
         isOn = !isOn;
     }
-
-    public void SetVolume(float vol)
+    public void SetVolume (float vol)
     {
         musicVolume = vol;
-        PlayerPrefs.SetFloat("music", vol);
+        print(musicVolume);
+        //musicVolume = slider.value;
+        PlayerPrefs.SetFloat("music", musicVolume);
         audioSrc.volume = musicVolume;
 
-
+       /*if (musicVolume > 0 && musicVolume <= 0.25f)
+        {
+            PlayerPrefs.SetFloat("music", 0.25f);
+        }
+        if(musicVolume > 0.25f && musicVolume <= 0.50f)
+        {
+            PlayerPrefs.SetFloat("music", 0.50f);
+        }
+        if (musicVolume > 0.50f && musicVolume <= 0.75f)
+        {
+            PlayerPrefs.SetFloat("music", 0.75f);
+        }*/
     }
 }

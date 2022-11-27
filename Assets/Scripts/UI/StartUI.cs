@@ -8,9 +8,9 @@ public class StartUI : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
-    }
-     
+        print("StartGame");
+        SceneManager.LoadScene(1);      
+    }    
     public void ExitGame()
     {
         Application.Quit();

@@ -11690,10 +11690,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8442174930150381134}
-    - target: {fileID: 138937900035660648, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
     - target: {fileID: 138937900035660650, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
       propertyPath: m_Name
       value: Exit
@@ -11822,31 +11818,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3140076582087636390, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 3140076582087636391, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2416081973409055426}
-    - target: {fileID: 3140076582087636391, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewGame
-      objectReference: {fileID: 0}
     - target: {fileID: 5658927043161260599, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 8434459868332199187, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2416081973409055426}
-    - target: {fileID: 8434459868332199187, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
     - target: {fileID: 8434459868332199404, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434459868332199405, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8434459868544191820, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -11862,7 +11854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8434459868544191821, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -82
+      value: -52
       objectReference: {fileID: 0}
     - target: {fileID: 8434459868714286819, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11874,7 +11866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8434459868714286844, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -33
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8434459869467284150, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11904,10 +11896,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8442174930150381134}
-    - target: {fileID: 8434459870338011581, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
     - target: {fileID: 8434459870396740660, guid: d1dee916a52ba4135a67ee00859a5b08, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12031,10 +12019,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2416081973409055426}
-    - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewGame
-      objectReference: {fileID: 0}
     - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameUI, Assembly-CSharp
@@ -12222,10 +12206,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8442174930150381134}
     - target: {fileID: 138937900035660648, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 138937900035660648, guid: 30aa7874a1331af4e9ff6bbf59b79fda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: StartUI, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -12343,10 +12323,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2416081973409055426}
-    - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewGame
-      objectReference: {fileID: 0}
     - target: {fileID: 2518304159597645290, guid: 329ad502b19cec144b2ef87a1d225ab2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameUI, Assembly-CSharp

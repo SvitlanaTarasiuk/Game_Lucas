@@ -17,53 +17,61 @@ public class Hero : MonoBehaviour
     public int silver = 0;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+
     //private Animator anim;
 
     public int Key
     {
         get => key;
+        set => key = value;
     }
 
     void Awake()
     {
+        print("AwakeHero");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        //anim = GetComponent<Animator>();
-        SceneManager.sceneLoaded += LevelLoaded;//підписка на подію завантаження сцени
+        //anim = GetComponent<Animator>();       
+        SceneManager.sceneLoaded += LevelLoaded;            //підписка на подію завантаження сцени    
     }
     void Start()
-    {
-        SetValueInUI();
+    {  
+        print("StartHero");
+        SetValueInUI();    
     }
+
     void SetValueInUI()
-    {
+    {   
+        print("SetValueInUI");
         gameUI.SetCountCoinUI(coins);
         gameUI.SetCountDiamondUI(diamond);
-        gameUI.SetCountSilverUI(silver);
+        gameUI.SetCountSilverUI(silver);  
         gameUI.SetCountLifeUI(life);
+        
     }
     private void LevelLoaded(Scene scene,LoadSceneMode mode)
     {
-        Invoke("ConnectUI", 0.1f);
+        print("LevelLoaded");     
+        Invoke("ConnectUI", 0.1f);          
     }
     void ConnectUI()
     {
-        if(SingletoneHero.singletoneHero.transform==transform)
+        if (SingletoneHero.singletoneHero.transform == transform)
         {
+            print("ConnectUI");
             gameUI = FindObjectOfType<GameUI>();
             SetValueInUI();
         }
     }
-
     public void NewStartParametr()
     {
+        print("NewStartParametr");
         coins = 0;
         diamond = 0;
         silver = 0;
         life = 5;
         key = 0;
-        SetValueInUI();
-
+        SetValueInUI();    
     }
     private void FixedUpdate()
     {
@@ -89,18 +97,15 @@ public class Hero : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
         Flip(move);
     }
-
     public void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
-
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position + Vector3.down, 0.3f);
         isGrounded = collider.Length > 1;
     }
-
     private void Flip(float move)
     {
         if (move < 0 && isRigth)
@@ -114,7 +119,6 @@ public class Hero : MonoBehaviour
             sprite.flipX = false;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Coins")
@@ -164,7 +168,6 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Enemy")
@@ -191,7 +194,7 @@ public class Hero : MonoBehaviour
         }
     }
     
-    private void Attack()
+    public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Return) && silver > 0)
         {
@@ -215,14 +218,18 @@ public class Hero : MonoBehaviour
 
     private void Damage()
     {
+        print("life-1");
         life -= 1;
         gameUI.RemuveHeart();
-
+   
         if (life == 0)
         {
+            print("Life=0_DamageActivelGameOver");
             Time.timeScale = 0;
             gameUI.GameOver();
+            
         }
+        
     }
 
 }

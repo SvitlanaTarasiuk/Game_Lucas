@@ -12,6 +12,7 @@ public class SingletoneHero : MonoBehaviour
         {
             if (_singletoneHero == null)
             {
+                print("clasSingletonObject+DontDestroy");
                 _singletoneHero = GameObject.FindObjectOfType<SingletoneHero>();
                 DontDestroyOnLoad(_singletoneHero.gameObject);
             }
@@ -23,12 +24,23 @@ public class SingletoneHero : MonoBehaviour
     {
         if (_singletoneHero == null)
         {
+            print("SingeltonAwake_DontDestroy");
             _singletoneHero = this;
-            DontDestroyOnLoad(_singletoneHero.gameObject);
+            DontDestroyOnLoad(gameObject);
+
         }
-        else if (this != _singletoneHero)
+        /* else if (this != _singletoneHero)
+         {
+             print("SingeltonAwake_Destroy");
+             Destroy(this.gameObject);
+         }*/
+        else
         {
-            Destroy(this.gameObject);
-        }
+            if (_singletoneHero != this)
+            {
+                print("SingeltonAwake_Destroy");
+                Destroy(gameObject);
+           }
+        }     
     }
-}
+   }
