@@ -8,6 +8,12 @@ public class Hero : MonoBehaviour
     [SerializeField] private GameUI gameUI;
     [SerializeField] private Rigidbody2D silverWeapon;
     [SerializeField] private Color colorDamage;
+
+    [SerializeField] private bool isMobileController = false;
+    private bool isController = true;
+    public float move;
+
+
     private bool isRigth = true;
     private bool isGrounded = false;
     public int coins = 0;
@@ -18,7 +24,7 @@ public class Hero : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
 
-    //private Animator anim;
+    private Animator anim;
 
     public int Key
     {
@@ -31,9 +37,10 @@ public class Hero : MonoBehaviour
         print("AwakeHero");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        //anim = GetComponent<Animator>();       
+        anim = GetComponent<Animator>();       
         SceneManager.sceneLoaded += LevelLoaded;            //підписка на подію завантаження сцени    
     }
+
     void Start()
     {
         print("StartHero");
@@ -69,9 +76,9 @@ public class Hero : MonoBehaviour
                 SetValueInUI();
             }
         }
-        catch(MissingReferenceException e)
+        catch (MissingReferenceException e)
         {
-        //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
+            //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
@@ -103,15 +110,33 @@ public class Hero : MonoBehaviour
 
     public void Run()
     {
-        float move = Input.GetAxis("Horizontal");
-        Vector3 dir = transform.right * move;
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-        Flip(move);
+        if (isController)
+        {
+            if (!isMobileController)
+            {
+                float move = Input.GetAxis("Horizontal");
+            }
+            Vector3 dir = transform.right * move;
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
+
+            anim.SetFloat("speedX",Mathf.Abs (move));
+            Flip(move);
+        }
     }
     public void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
+    public void JumpMobile()
+    {
+        CheckGround();
+
+        if (isGrounded)
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position + Vector3.down, 0.3f);
@@ -205,9 +230,10 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(bool isAttack = false)
     {
-        if (Input.GetKeyDown(KeyCode.Return) && silver > 0)
+        if (isAttack || Input.GetKeyDown(KeyCode.Return) && silver > 0)
+        //if (Input.GetKeyDown(KeyCode.Return) && silver > 0)
         {
             silver--;
             gameUI.SetCountSilverUI(silver);
@@ -220,6 +246,10 @@ public class Hero : MonoBehaviour
                 srSilver.flipY = true;
             }
         }
+    }
+    public void AttackMomile()
+    {
+        Attack(true);
     }
 
     void ResetMaterial()

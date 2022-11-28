@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 9c46f59b9c13448a5976d8ec2d8ba5aa, type: 3}
+  m_Sprite: {fileID: 236618388, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
   m_Color: {r: 0.7264151, g: 0.69489145, b: 0.69489145, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   gameUI: {fileID: 0}
   silverWeapon: {fileID: 4416089701507728471, guid: 6abbbaa48e390d0408e5fca54274a3f7, type: 3}
   colorDamage: {r: 0.9433962, g: 0.5562478, b: 0.5562478, a: 1}
+  isMobileController: 0
+  move: 0
   coins: 0
   life: 5
   key: 0
@@ -176,8 +178,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03652191, y: -0.12904489}
-  m_Size: {x: 0.8165245, y: 1.910619}
+  m_Offset: {x: -0.05098915, y: 0.20101821}
+  m_Size: {x: 0.78759, y: 1.8801515}
   m_Direction: 0
 --- !u!114 &8797169950100145164
 MonoBehaviour:
