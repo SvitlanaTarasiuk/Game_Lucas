@@ -35,32 +35,43 @@ public class Hero : MonoBehaviour
         SceneManager.sceneLoaded += LevelLoaded;            //підписка на подію завантаження сцени    
     }
     void Start()
-    {  
+    {
         print("StartHero");
-        SetValueInUI();    
+        SetValueInUI();
     }
 
     void SetValueInUI()
-    {   
+    {
         print("SetValueInUI");
         gameUI.SetCountCoinUI(coins);
         gameUI.SetCountDiamondUI(diamond);
-        gameUI.SetCountSilverUI(silver);  
+        gameUI.SetCountSilverUI(silver);
         gameUI.SetCountLifeUI(life);
-        
+
     }
-    private void LevelLoaded(Scene scene,LoadSceneMode mode)
+    private void LevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        print("LevelLoaded");     
-        Invoke("ConnectUI", 0.1f);          
+        print("LevelLoaded");
+        ConnectUI();
+        //Invoke("ConnectUI", 0.1f);
+        //CancelInvoke
     }
     void ConnectUI()
     {
-        if (SingletoneHero.singletoneHero.transform == transform)
+        try
         {
-            print("ConnectUI");
-            gameUI = FindObjectOfType<GameUI>();
-            SetValueInUI();
+            print($"{SingletoneHero.singletoneHero.transform}, {transform} try");
+
+            if (SingletoneHero.singletoneHero.transform == transform)
+            {
+                print("ConnectUI");
+                gameUI = FindObjectOfType<GameUI>();
+                SetValueInUI();
+            }
+        }
+        catch(MissingReferenceException e)
+        {
+        //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
@@ -71,7 +82,7 @@ public class Hero : MonoBehaviour
         silver = 0;
         life = 5;
         key = 0;
-        SetValueInUI();    
+        SetValueInUI();
     }
     private void FixedUpdate()
     {
@@ -146,21 +157,21 @@ public class Hero : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Enemy")
-        {           
+        {
             Damage();
             Destroy(collision.gameObject);
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
         }
         if (collision.tag == "SpicesEnemy")
-        {       
+        {
             Damage();
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
         }
         if (collision.tag == "RestartStartPoint")
         {
-            Damage();            
+            Damage();
         }
         if (collision.tag == "Key")
         {
@@ -179,7 +190,7 @@ public class Hero : MonoBehaviour
             transform.parent = collision.transform;
         }
         if (collision.transform.tag == "Zombie")
-        {           
+        {
             Damage();
             sprite.color = colorDamage;
             Invoke("ResetMaterial", 0.5f);
@@ -193,7 +204,7 @@ public class Hero : MonoBehaviour
             transform.parent = null;
         }
     }
-    
+
     public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Return) && silver > 0)
@@ -221,15 +232,15 @@ public class Hero : MonoBehaviour
         print("life-1");
         life -= 1;
         gameUI.RemuveHeart();
-   
+
         if (life == 0)
         {
             print("Life=0_DamageActivelGameOver");
             Time.timeScale = 0;
             gameUI.GameOver();
-            
+
         }
-        
+
     }
 
 }
