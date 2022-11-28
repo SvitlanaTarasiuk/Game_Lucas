@@ -13,7 +13,6 @@ public class Hero : MonoBehaviour
     private bool isController = true;
     public float move;
 
-
     private bool isRigth = true;
     private bool isGrounded = false;
     public int coins = 0;
@@ -61,7 +60,6 @@ public class Hero : MonoBehaviour
         print("LevelLoaded");
         ConnectUI();
         //Invoke("ConnectUI", 0.1f);
-        //CancelInvoke
     }
     void ConnectUI()
     {
@@ -78,7 +76,7 @@ public class Hero : MonoBehaviour
         }
         catch (MissingReferenceException e)
         {
-            //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
+            print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
@@ -93,44 +91,56 @@ public class Hero : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (isController)
+        {
+            if (!isMobileController)
+            {
+                move = Input.GetAxis("Horizontal");
+            }
+            rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
+            anim.SetFloat("speedX", Mathf.Abs(move));
+            Flip(move);
+        }
+        //Run();
         CheckGround();
     }
 
     void Update()
     {
-        if (Time.timeScale >= 1)
-        {
-            if (Input.GetButton("Horizontal"))
-            { Run(); }
-            if (isGrounded && Input.GetButtonDown("Jump"))
-            { Jump(); }
+       // if (Time.timeScale >= 1)
+       if(isController)
+        {       
+            Jump();
             Attack();
         }
     }
-
-    public void Run()
+   
+    /*public void Run()
     {
         if (isController)
         {
             if (!isMobileController)
             {
-                float move = Input.GetAxis("Horizontal");
+              move = Input.GetAxis("Horizontal");
             }
-            Vector3 dir = transform.right * move;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-
-            anim.SetFloat("speedX",Mathf.Abs (move));
+           // Input.GetButton("Horizontal");
+            rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
+            //Vector3 dir = transform.right * move;
+            //transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
+            anim.SetFloat("speedX", Mathf.Abs(move));
             Flip(move);
         }
-    }
+    }*/
+
     public void Jump()
     {
-        rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
     public void JumpMobile()
     {
-        CheckGround();
-
         if (isGrounded)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);

@@ -21,19 +21,19 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 270224230, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
-    - time: 0.1
+    - time: 0.083333336
       value: {fileID: 1475326381, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
     - time: 0.16666667
       value: {fileID: -1690203977, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
     - time: 0.25
       value: {fileID: -2113339971, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
-    - time: 0.36666667
+    - time: 0.33333334
       value: {fileID: 660503788, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
     - time: 0.41666666
       value: {fileID: 435116362, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
     - time: 0.5
       value: {fileID: 2124880584, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
-    - time: 0.56666666
+    - time: 0.5833333
       value: {fileID: 2061989203, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
     - time: 0.6666667
       value: {fileID: 270224230, guid: b7b377d7c8acc4c5f8db80adada3e422, type: 3}
