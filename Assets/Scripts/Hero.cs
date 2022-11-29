@@ -76,7 +76,7 @@ public class Hero : MonoBehaviour
         }
         catch (MissingReferenceException e)
         {
-           print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
+           //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
