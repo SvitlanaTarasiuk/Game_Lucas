@@ -14,6 +14,8 @@ public class MusicOff : MonoBehaviour
     void Start()
     {
         isOn = true;
+        musicVolume = PlayerPrefs.GetFloat("music", 1f);
+        slider.value = musicVolume;
     }
     void Update()
     {
@@ -53,22 +55,7 @@ public class MusicOff : MonoBehaviour
     public void SetVolume (float vol)
     {
         musicVolume = vol;
-        print(musicVolume);
-        //musicVolume = slider.value;
         PlayerPrefs.SetFloat("music", musicVolume);
         audioSrc.volume = musicVolume;
-
-       /*if (musicVolume > 0 && musicVolume <= 0.25f)
-        {
-            PlayerPrefs.SetFloat("music", 0.25f);
-        }
-        if(musicVolume > 0.25f && musicVolume <= 0.50f)
-        {
-            PlayerPrefs.SetFloat("music", 0.50f);
-        }
-        if (musicVolume > 0.50f && musicVolume <= 0.75f)
-        {
-            PlayerPrefs.SetFloat("music", 0.75f);
-        }*/
     }
 }

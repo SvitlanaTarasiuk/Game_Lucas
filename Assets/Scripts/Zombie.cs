@@ -26,12 +26,12 @@ public class Zombie : MonoBehaviour
         if (moveingRigth)
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-            sprRend.flipX = true;
+            sprRend.flipX = false;
         }       
         else
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-            sprRend.flipX = false;
+            sprRend.flipX = true;
         }
         
     }
