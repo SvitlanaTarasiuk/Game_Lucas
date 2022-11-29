@@ -36,7 +36,7 @@ public class Hero : MonoBehaviour
         print("AwakeHero");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        anim = GetComponent<Animator>();       
+        anim = GetComponent<Animator>();
         SceneManager.sceneLoaded += LevelLoaded;            //підписка на подію завантаження сцени    
     }
 
@@ -76,7 +76,7 @@ public class Hero : MonoBehaviour
         }
         catch (MissingReferenceException e)
         {
-            print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
+           // print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
@@ -91,47 +91,33 @@ public class Hero : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (isController)
-        {
-            if (!isMobileController)
-            {
-                move = Input.GetAxis("Horizontal");
-            }
-            rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
-            anim.SetFloat("speedX", Mathf.Abs(move));
-            Flip(move);
-        }
-        //Run();
         CheckGround();
     }
 
     void Update()
     {
-       // if (Time.timeScale >= 1)
-       if(isController)
-        {       
-            Jump();
-            Attack();
-        }
-    }
-   
-    /*public void Run()
-    {
+        // if (Time.timeScale >= 1)
         if (isController)
         {
-            if (!isMobileController)
-            {
-              move = Input.GetAxis("Horizontal");
-            }
-           // Input.GetButton("Horizontal");
-            rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
-            //Vector3 dir = transform.right * move;
-            //transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-            anim.SetFloat("speedX", Mathf.Abs(move));
-            Flip(move);
+            Jump();
+            Attack();
+            Run();
         }
-    }*/
+    }   
+    public void Run()
+    {
+        if (!isMobileController)
+        {
+            move = Input.GetAxis("Horizontal");
+        }
+        rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
 
+        //Vector3 dir = transform.right * move;
+        //ransform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
+
+        anim.SetFloat("speedX", Mathf.Abs(move));
+        Flip(move);
+    }
     public void Jump()
     {
         if (isGrounded && Input.GetButtonDown("Jump"))

@@ -25,11 +25,11 @@ public class ButtonAndroid : MonoBehaviour
     {
         hero.move = 0;
     }
-    public void JumpClick()
+    public void JumpClick() //Down
     {
         hero.JumpMobile();
     }
-    public void AttackClick()
+    public void AttackClick() //Down
     {
         hero.AttackMomile();
     }
