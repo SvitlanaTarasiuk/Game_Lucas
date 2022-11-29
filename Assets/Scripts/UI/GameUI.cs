@@ -84,7 +84,7 @@ public class GameUI : MonoBehaviour
 
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
-        SingletoneHero.singletoneHero.GetComponent<Hero>().NewStartParametr();
+        SingletoneHero._singletoneHero.GetComponent<Hero>().NewStartParametr();
 
     }
     /*public void Restart()

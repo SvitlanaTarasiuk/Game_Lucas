@@ -13,15 +13,20 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float pointY = -0.6f;
 
     //void Start()
-    public void InitCam(Transform playerTransform)
-    {
+    //public void InitCam(Transform playerTransform)
+         void Start()
+    {     
+        Transform  playerTransform = SingletoneHero._singletoneHero.transform;
         player = playerTransform;
+        player.position = GameObject.Find("StartPoint").transform.position;
         cameraTransform = transform;
         deltaPosCam = cameraTransform.position - player.position;
         deltaPosCam.z = -10;
+        print("Start_Camera");
     }
     void FixedUpdate()
     {
+         
         //if (player.position.x > pointX2 && transform.position.x < pointX1)
         if (player.position.x < pointX1)
         {

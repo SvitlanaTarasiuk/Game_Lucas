@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class InitGame : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
             print("InitGame");     
-            Transform player = SingletoneHero.singletoneHero.transform;
-            player.position = GameObject.Find("StartPoint").transform.position;
-            Camera.main.GetComponent<CameraController>().InitCam(player);     
+           // Transform player = SingletoneHero._singletoneHero.transform;
+            ///player.position = GameObject.Find("StartPoint").transform.position;
+            //Camera.main.GetComponent<CameraController>().InitCam(player);     
     }       
 }

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SingletoneHero : MonoBehaviour
 {
-    private static SingletoneHero _singletoneHero;
+    public static SingletoneHero _singletoneHero;
 
-    public static SingletoneHero singletoneHero
+    /*public static SingletoneHero singletoneHero
     {
         get
         {
@@ -16,7 +16,7 @@ public class SingletoneHero : MonoBehaviour
             }
             return _singletoneHero;
         }
-    }
+    }*/
 
     void Awake()
     {
@@ -24,10 +24,10 @@ public class SingletoneHero : MonoBehaviour
         {
             print("SingeltonAwake_DontDestroy");
             _singletoneHero = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
 
         }
-        else if (this != _singletoneHero)
+        else if(_singletoneHero != this ) 
          {
              print("SingeltonAwake_Destroy");
              Destroy(this.gameObject);

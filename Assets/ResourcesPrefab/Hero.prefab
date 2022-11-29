@@ -71,10 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  jumpForce: 15
+  jumpForce: 16
   gameUI: {fileID: 0}
   silverWeapon: {fileID: 4416089701507728471, guid: 6abbbaa48e390d0408e5fca54274a3f7, type: 3}
-  colorDamage: {r: 0.9433962, g: 0.5562478, b: 0.5562478, a: 1}
+  colorDamage: {r: 0.9339623, g: 0.47138664, b: 0.47138664, a: 1}
   isMobileController: 0
   move: 0
   coins: 0

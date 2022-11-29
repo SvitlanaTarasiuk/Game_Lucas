@@ -59,15 +59,14 @@ public class Hero : MonoBehaviour
     {
         print("LevelLoaded");
         ConnectUI();
-        //Invoke("ConnectUI", 0.1f);
     }
     void ConnectUI()
     {
         try
         {
-            print($"{SingletoneHero.singletoneHero.transform}, {transform} try");
+            print($"{SingletoneHero._singletoneHero.transform}, {transform} try");
 
-            if (SingletoneHero.singletoneHero.transform == transform)
+            if (SingletoneHero._singletoneHero.transform == transform)
             {
                 print("ConnectUI");
                 gameUI = FindObjectOfType<GameUI>();
@@ -76,7 +75,8 @@ public class Hero : MonoBehaviour
         }
         catch (MissingReferenceException e)
         {
-           //print($"{SingletoneHero.singletoneHero.transform}, {transform} - {e}");
+            _ = e;
+           print($"{SingletoneHero._singletoneHero.transform}, {transform} - {e}");
         }
     }
     public void NewStartParametr()
