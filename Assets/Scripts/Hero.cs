@@ -22,14 +22,15 @@ public class Hero : MonoBehaviour
     public int silver = 0;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-
     private Animator anim;
+
 
     public int Key
     {
         get => key;
         set => key = value;
     }
+    
 
     void Awake()
     {
@@ -37,16 +38,31 @@ public class Hero : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        SceneManager.sceneLoaded += LevelLoaded;            //підписка на подію завантаження сцени    
+       // SceneManager.sceneLoaded += LevelLoaded;//Sing            //підписка на подію завантаження сцени    
     }
 
     void Start()
     {
         print("StartHero");
-        SetValueInUI();
+        // SetValueInUI();
+
+        coins = GlobalControl.Instantiate.coins;
+        life = GlobalControl.Instantiate.life;
+        diamond = GlobalControl.Instantiate.diamond;
+        silver = GlobalControl.Instantiate.silver;
+        gameUI = GlobalControl.Instantiate.gameUI;
     }
 
-    void SetValueInUI()
+    public void SavePlayer()
+    {
+        GlobalControl.Instantiate.coins = coins;
+        GlobalControl.Instantiate.life = life;
+        GlobalControl.Instantiate.diamond = diamond;
+        GlobalControl.Instantiate.silver = silver;
+        GlobalControl.Instantiate.gameUI = gameUI;
+    }
+
+        /*void SetValueInUI()//Sing
     {
         print("SetValueInUI");
         gameUI.SetCountCoinUI(coins);
@@ -88,7 +104,7 @@ public class Hero : MonoBehaviour
         life = 5;
         key = 0;
         SetValueInUI();
-    }
+    }*/
     private void FixedUpdate()
     {
         CheckGround();
@@ -156,24 +172,28 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Coins")
         {
             coins += 100;
+            SavePlayer();
             gameUI.SetCountCoinUI(coins);
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Silver")
         {
             silver += 1;
+            SavePlayer();
             gameUI.SetCountSilverUI(silver);
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Heart")
         {
             life += 1;
+            SavePlayer();
             gameUI.AddHeart();
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Diamond")
         {
             diamond += 5;
+            SavePlayer();
             gameUI.SetCountDiamondUI(diamond);
             Destroy(collision.gameObject);
         }
@@ -232,6 +252,7 @@ public class Hero : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Return) && silver > 0)
         {
             silver--;
+            SavePlayer();
             gameUI.SetCountSilverUI(silver);
             Rigidbody2D tempSilver = Instantiate(silverWeapon, transform.position, Quaternion.identity);
             tempSilver.AddForce(new Vector2(isRigth ? 300 : -300, 0));
@@ -257,6 +278,7 @@ public class Hero : MonoBehaviour
     {
         print("life-1");
         life -= 1;
+        SavePlayer();
         gameUI.RemuveHeart();
 
         if (life == 0)

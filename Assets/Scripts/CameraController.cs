@@ -3,8 +3,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {          
     [SerializeField] private float sensetyCam = 5;      //швидкість переміщення
-    //[SerializeField] private Transform player;          //об'єкт-ціль
-    Transform player;
+    [SerializeField] private Transform player;          //об'єкт-ціль
+    //Transform player;
     Transform cameraTransform;                          //камера
     Vector3 deltaPosCam;                                //зміщення
     Vector3 target;                             //ціль
@@ -16,8 +16,8 @@ public class CameraController : MonoBehaviour
     //public void InitCam(Transform playerTransform)
          void Start()
     {     
-        Transform  playerTransform = SingletoneHero._singletoneHero.transform;
-        player = playerTransform;
+        //Transform  playerTransform = SingletoneHero._singletoneHero.transform;
+       // player = playerTransform;
         player.position = GameObject.Find("StartPoint").transform.position;
         cameraTransform = transform;
         deltaPosCam = cameraTransform.position - player.position;

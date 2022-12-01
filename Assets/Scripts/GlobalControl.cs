@@ -7,10 +7,12 @@ public class GlobalControl: MonoBehaviour
     public int coins;
     public int life;
     public int diamond;
+    public int silver;
+    public int heart;
     public TextMeshProUGUI textCoint;
     public TextMeshProUGUI textDiamond;
     public TextMeshProUGUI textSilver;
-    public int heart;
+    //public GameObject[] objHearts;
     public GameUI gameUI;
 
     public static new GlobalControl Instantiate;
@@ -26,21 +28,24 @@ public class GlobalControl: MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }    
+    }
+    /*public void ResedData()
+    {
+        coins = 0;
+        life = 5;
+        diamond = 0;
+        silver = 0;
+        heart = 5;
+        
+    }*/
+
 }
-//public int coins;
-//public int life;
-//public int diamond;
-//public TextMeshProUGUI textCoint;
-//public TextMeshProUGUI textDiamond;
-//public TextMeshProUGUI textSilver;
-//public int heart;
-//public GameUI gameUI;
+
 
 //public void SavePlayer()
-//Clobal.Control.Instantiate.coins = coins;
+//GlobalControl.Instantiate.coins = coins;
 //...
 //void Start(0
-//coins = Clobal.Control.Instantiate.coins;
+//coins = GlobalControl.Instantiate.coins;
 //...
 

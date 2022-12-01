@@ -2704,7 +2704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6672790526999119462, guid: 0f54f0ab90c1c41888e9848916330b77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6672790526999119462, guid: 0f54f0ab90c1c41888e9848916330b77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3839,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5200401662167098566, guid: 1057d1a0ba9044f27b5dc5fdf29ba8fb, type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 5200401662167098566, guid: 1057d1a0ba9044f27b5dc5fdf29ba8fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3847,7 +3847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5200401662167098566, guid: 1057d1a0ba9044f27b5dc5fdf29ba8fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.21
+      value: -3.04
       objectReference: {fileID: 0}
     - target: {fileID: 5200401662167098566, guid: 1057d1a0ba9044f27b5dc5fdf29ba8fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7955,7 +7955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2094658197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7971,11 +7971,12 @@ MonoBehaviour:
   coins: 0
   life: 0
   diamond: 0
-  textCoint: {fileID: 0}
-  textDiamond: {fileID: 0}
-  textSilver: {fileID: 0}
+  silver: 0
   heart: 0
-  gameUI: {fileID: 0}
+  textCoint: {fileID: 631279383}
+  textDiamond: {fileID: 502626794}
+  textSilver: {fileID: 1224186880}
+  gameUI: {fileID: 390018441}
 --- !u!4 &2094658198
 Transform:
   m_ObjectHideFlags: 0
