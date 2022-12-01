@@ -15,8 +15,8 @@ public class Hero : MonoBehaviour
 
     private bool isRigth = true;
     private bool isGrounded = false;
-    public int coins = 0;
-    public int life = 5;
+    public int coins;// = 0;
+    public int life;// = 5;
     public int key = 0;
     public int diamond = 0;
     public int silver = 0;
@@ -38,19 +38,19 @@ public class Hero : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
-       // SceneManager.sceneLoaded += LevelLoaded;//Sing            //підписка на подію завантаження сцени    
+       //SceneManager.sceneLoaded += LevelLoaded;//Sing            //підписка на подію завантаження сцени    
     }
 
     void Start()
     {
         print("StartHero");
-        // SetValueInUI();
 
         coins = GlobalControl.Instantiate.coins;
         life = GlobalControl.Instantiate.life;
         diamond = GlobalControl.Instantiate.diamond;
         silver = GlobalControl.Instantiate.silver;
-        gameUI = GlobalControl.Instantiate.gameUI;
+        SetValueInUI();
+        //gameUI = GlobalControl.Instantiate.gameUI;
     }
 
     public void SavePlayer()
@@ -59,10 +59,10 @@ public class Hero : MonoBehaviour
         GlobalControl.Instantiate.life = life;
         GlobalControl.Instantiate.diamond = diamond;
         GlobalControl.Instantiate.silver = silver;
-        GlobalControl.Instantiate.gameUI = gameUI;
+        //GlobalControl.Instantiate.gameUI = gameUI;
     }
 
-        /*void SetValueInUI()//Sing
+     void SetValueInUI()//Sing
     {
         print("SetValueInUI");
         gameUI.SetCountCoinUI(coins);
@@ -71,12 +71,14 @@ public class Hero : MonoBehaviour
         gameUI.SetCountLifeUI(life);
 
     }
-    private void LevelLoaded(Scene scene, LoadSceneMode mode)
+   /* private void LevelLoaded(Scene scene, LoadSceneMode mode)
     {
         print("LevelLoaded");
-        ConnectUI();
-    }
-    void ConnectUI()
+        SetValueInUI();
+        //ConnectUI();
+    }*/
+
+    /*void ConnectUI()
     {
         try
         {
@@ -174,6 +176,7 @@ public class Hero : MonoBehaviour
             coins += 100;
             SavePlayer();
             gameUI.SetCountCoinUI(coins);
+            //gameUI.SetCountCoinUI();
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Silver")

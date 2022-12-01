@@ -20,30 +20,33 @@ public class GameUI : MonoBehaviour
     {
         print("StartUI");
         heart = GlobalControl.Instantiate.heart;
-        textCoin = GlobalControl.Instantiate.textCoint;
-        textDiamond = GlobalControl.Instantiate.textDiamond;
-        textSilver = GlobalControl.Instantiate.textSilver;
+        //textCoin.text = GlobalControl.Instantiate.textCoint.text;
+        //textDiamond.text = GlobalControl.Instantiate.textDiamond.text;
+        //textSilver.text = GlobalControl.Instantiate.textSilver.text;
+
         //objHearts = GlobalControl.Instantiate.objHearts;
     }
     public void SaveUI()
     {
         GlobalControl.Instantiate.heart = heart;
-        GlobalControl.Instantiate.textCoint = textCoin;
-        GlobalControl.Instantiate.textDiamond = textDiamond;
-        GlobalControl.Instantiate.textSilver = textSilver;
+       //GlobalControl.Instantiate.textCoint.text = textCoin.text;
+       // GlobalControl.Instantiate.textDiamond.text = textDiamond.text;
+        //GlobalControl.Instantiate.textSilver.text = textSilver.text;
         //GlobalControl.Instantiate.objHearts = objHearts;
 
     }
     public void AddHeart()
     {
+
         heart++;
-        //SaveUI();
+        SaveUI();
         UpdateHeart();
     }
     public void RemuveHeart()
-    {
+    {   
         heart--;
-        //SaveUI();
+       print($"{heart}-heart");
+        SaveUI();
         UpdateHeart();
     }
     void UpdateHeart()
@@ -52,26 +55,29 @@ public class GameUI : MonoBehaviour
         {
             if (heart > i)
             {
+
                 objHearts[i].SetActive(true);
             }
             else
             {
+               
                 objHearts[i].SetActive(false);
             }
         }
     }
-    /*public void SetCountLifeUI(int life)
+    public void SetCountLifeUI(int life)
     {
         heart = life;
         UpdateHeart();
-    }*/
+    }
     public void SetCountCoinUI(int countCoin)
     {   
         textCoin.text = countCoin.ToString();
-        
+        //textCoin.text=GlobalControl.Instantiate.coins.ToString();
+        //SaveUI();        
     }
     public void SetCountDiamondUI(int countDiamond)
-    {   //SaveUI();
+    {   
         textDiamond.text = countDiamond.ToString();
 
     }
@@ -106,6 +112,7 @@ public class GameUI : MonoBehaviour
 
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
+        GlobalControl.Instantiate.ResetData();
         //SingletoneHero._singletoneHero.GetComponent<Hero>().NewStartParametr();
 
     }
